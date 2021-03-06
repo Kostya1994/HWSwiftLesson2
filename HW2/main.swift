@@ -30,7 +30,7 @@ func calculateDivisionThree (_ x : Int) -> Int {
     }
 }
 
-// MARK: Удалить из этого массива все четные числа и все числа, которые не делятся на 3;
+// MARK: Создание пустого массива Int. Заполнение массива;;
 var array = [Int]()
 for _ in 0...99 {
     let y = Int.random(in: 0..<100)
@@ -40,7 +40,8 @@ print(array)
 print(array.count)
 print("____________________________")
 
-// MARK: Создание пустого массива Int. Заполнение массива;
+// MARK: Удалить из этого массива все четные числа и все числа, которые не делятся на 3;
+
 for x in array {
     let result1 = calculateEvenNumbers(x)
     switch result1 {
@@ -65,5 +66,33 @@ for x in array {
 print(array)
 print(array.count)
 print("____________________________")
-// MARK: Фибоначи отложил на потом :-( ;
+// MARK: Написать функцию, которая добавляет в массив новое число Фибоначчи, и добавить при помощи нее 50 элементов.
+func fibonacci (_ n : Int) -> Int {
+    if n == 0 {
+        return 0
+    }
+    else if n == 1 {
+        return 1
+    }
+    return fibonacci(n - 1) + fibonacci(n - 2)
+}
+var x = fibonacci(2)
+print(x)
+print("____________________________")
+
+func fibonacciArray (_ fib : Int) -> [Int] {
+var array1 = [Int]()
+    for i in 0...fib { 
+    let y = fibonacci(i)
+    array1.append(y)
+    }
+    return array1
+}
+
+//MARK: не стоит вызывать больше 10, перегружает процессор :-(
+//let fibArr = fibonacciArray(10)
+//print(fibArr)
+
+
+
 

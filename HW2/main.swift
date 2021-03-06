@@ -65,5 +65,5 @@ for x in array {
 print(array)
 print(array.count)
 print("____________________________")
-// MARK: Фибоначи отложил на потом :-( ;
+// MARK: Фибоначи отложил на потом;
 
